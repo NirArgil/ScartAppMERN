@@ -5,7 +5,14 @@ import React, { Fragment, useState } from "react";
 
 import { register } from "../../actions/auth";
 import { setAlert } from "../../actions/alert";
-import  Logout  from "./Logout";
+
+import styled from 'styled-components';
+
+export const Wrapper = styled.div`
+ font-family: "Trebuchet MS", sans-serif;
+ text-align: center;
+ margin-top: 25px;
+`;
 
 export const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -37,7 +44,8 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign Up</h1>
+      <Wrapper>
+      <h1 className="large text-primary">Sign Up Now</h1>
       <p className="lead">
         <i className="fas fa-user" /> Create Your Account
       </p>
@@ -61,10 +69,6 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={e => onChange(e)}
             required
           />
-          <small className="form-text">
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
-          </small>
         </div>
         <div className="form-group">
           <input
@@ -91,6 +95,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         <p className="my-1">
             Already have an account? <Link to="login.html">Sign In</Link>
         </p>
+      </Wrapper>
     </Fragment>
   );
 };

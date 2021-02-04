@@ -11,6 +11,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import Grid from '@material-ui/core/Grid';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Badge from '@material-ui/core/Badge';
+import Header from './Header/Header';
 
 //Login
 import Landing from "./components/layout/Landing";
@@ -48,7 +49,7 @@ const getProducts = async (): Promise<CartItemType[]> =>
 
 const App = () => {
   useEffect(() => {
-    // We dispatch the loadUser action by taking the 'store'
+    // dispatch the loadUser action by taking the 'store'
     // directly & call dispatch- a method in the 'store'
     // then pass the loadUser action in it to dispatch it.
 
@@ -105,6 +106,9 @@ return (
 <Provider store={store}>
       <Router>
         <Fragment>
+          
+         <Header />
+
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route component={Routes} />

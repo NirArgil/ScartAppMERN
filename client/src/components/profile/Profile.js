@@ -5,9 +5,6 @@ import React, { Fragment, useEffect } from "react";
 
 import { getProfileById } from "../../actions/profile";
 import ProfileAbout from "./ProfileAbout";
-// import ProfileEducation from "./ProfileEducation";
-// import ProfileExperience from "./ProfileExperience";
-// import ProfileGithub from "./ProfileGithub";
 import ProfileTop from "./ProfileTop";
 import LinearProgress from '@material-ui/core/LinearProgress';
 

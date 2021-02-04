@@ -6,17 +6,9 @@ const Footer = () => {
 
         <footer class="footer-distributed">
             <div class="footer-left">
-      <h3>Nir<span>FrontEndDeveloper</span></h3>
+      <h3>Nir<span>FrontEnd Web Developer</span></h3>
 
-    <p class="footer-links">
-    <a href="#">Home</a>
- .
-    <a href="#">Blog</a>
- .
-    <a href="#">About</a>
- .
-    <a href="#">Contact</a>
-    </p>
+    
 
     <p class="footer-company-name">Nir Argil &copy; 2021</p>
     </div>

@@ -15,7 +15,25 @@ text-align: center;
 margin-top: 25px;
 
 h1 {
- letter-spacing: 5px;
+ letter-spacing: 7px;
+ font-weight: 900;
+ font-size: 50px;
+}
+
+.GoShop {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.DLT {
+  margin-top: 90px;
+  margin-bottom: -100px;
+} 
+
+p {
+ font-weight: 100;
+ font-size: 25px;
+}
 }
 `;
 
@@ -48,15 +66,20 @@ const Dashboard = ({
           {/* <Experience experience={profile.experience} /> */}
             {/* <Education education={profile.education} /> */}
 
-            <div className="my-2">
-              <button className="btn btn-danger" onClick={() => deleteAccount()}>
-                <i className="fas fas-user-minus"></i>Delete my Account
-              </button>
+           
+            <div className="GoShop"> 
+              <Link to="Shop" className="btn btn-light">
+              <i className="far fa-handshake fa-2x" /> Go Shopping
+              </Link>
             </div>
 
-            <Link to="Shop" className="btn btn-light">
-        <i className="far fa-handshake fa-2x" /> Go Shopping
-            </Link>
+            <div className="DLT">
+              <div className="my-2">
+                <button className="btn btn-danger" onClick={() => deleteAccount()}>
+                  <i className="fas fas-user-minus"></i>Delete my Account
+                </button>
+              </div>
+            </div>
 
             </Wrapper>
         </Fragment>

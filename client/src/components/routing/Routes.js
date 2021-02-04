@@ -10,10 +10,7 @@ import Dashboard from "../dashboard/Dashboard.js";
 import CreateProfile from "../profile-forms/CreateProfile";
 import EditProfile from "../profile-forms/EditProfile";
 import Shop from "../../Shop";
-// import AddExperience from "../profile-forms/AddExperience";
-// import AddEducation from "../profile-forms/AddEducation";
-// import Post from "../post/Post";
-// import Posts from "../posts/Posts";
+
 import Profile from "../profile/Profile";
 import Profiles from "../profiles/Profiles";
 import PrivateRoute from "../routing/PrivateRoute";
