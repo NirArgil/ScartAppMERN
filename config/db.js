@@ -4,6 +4,10 @@ const mongoose = require("mongoose");
 
 const db = config.get("MongoURI");
 
+if(process.env.DB_URL) {
+  db = process.env.DB_URL;
+}
+
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
