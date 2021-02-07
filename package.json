@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "npm install && cd ./client && npm install",
+    "postinstall": "cd client && npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "npm start --prefix client",
     "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
