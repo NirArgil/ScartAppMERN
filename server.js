@@ -8,7 +8,7 @@ const connectDB = require("./config/db");
 
 const PORT = process.env.PORT || 5000;
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 // Connect the Database
 connectDB();
