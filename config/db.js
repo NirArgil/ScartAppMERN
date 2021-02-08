@@ -2,7 +2,7 @@
 const config = require("config");
 const mongoose = require("mongoose");
 
-const db = config.get("MongoURI");
+let db = config.get("MongoURI");
 
 if(process.env.DB_URL) {
   db = process.env.DB_URL;
