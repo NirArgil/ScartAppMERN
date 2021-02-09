@@ -1,33 +1,28 @@
-import { connect, Provider } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
-import { PropTypes } from "prop-types";
-import React, { Fragment, useState } from "react";
+import { Provider } from "react-redux";
+import { Link } from "react-router-dom";
+import React from "react";
 import {useSelector, useDispatch} from 'react-redux'
-import  { loadUser } from "../../actions/auth";
-import {login} from "../../actions/auth";
-import { logout } from "../../actions/auth";
-import * as auth from "../../reducers/auth";
-import combineReducers from "../../reducers/index";
 import store from "../../store";
-
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 
+.CustomersBtn {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.DashBtn {
+  margin-right: 3px;
+  display: inline-block
+}
+
 .LogoutBtn {
-  display: inline-block
-}
-
-.Dash {
-  margin-right: 5px;
-  display: inline-block
-}
-
-`;
+ display: inline-block
+}`;
 
 export const Logout = ( ) => {  
 
-const dispatch = useDispatch();
 const Loggedin = useSelector(initialState => initialState.auth.isAuthenticated);
 
 const onlogoutClick = async e => {
@@ -40,8 +35,14 @@ const onlogoutClick = async e => {
     <Provider store={store}>
       <Wrapper>
 
-    <div className="Dash">
-      { Loggedin ? ( <Link to="Dashboard" className="btn btn-light">
+    <div className="CustomersBtn">
+      { Loggedin ? ( <Link to="/profiles" className="btn btn-light">
+           Scart Customers 
+          </Link> ) : ( null ) }
+    </div>  
+
+    <div className="DashBtn">
+      { Loggedin ? ( <Link to="/dashboard" className="btn btn-light">
            Dashboard 
           </Link> ) : ( null ) }
     </div>  
@@ -51,25 +52,8 @@ const onlogoutClick = async e => {
       ( <button type="button" class="btn btn-primary" onClick={(e) => onlogoutClick(e)}>
       Log Out
       </button>) : ( null )}
-    </div>
-
-    
+    </div>    
 
        </Wrapper>
-    </Provider>
-     
-  )};
-      
-  // Logout.propTypes = {
-  //   logout: PropTypes.func.isRequired,
-  //   isAuthenticated: PropTypes.bool
-  // };
-  
-  // const mapStateToProps = (state) => ({
-  //   isAuthenticated: state.auth.isAuthenticated,
-  // });
-  
-  // export default connect(
-  //   mapStateToProps,
-  //   { logout }
-  // )(Logout);
+    </Provider>     
+)};

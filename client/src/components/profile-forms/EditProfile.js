@@ -2,8 +2,15 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import React, { Fragment, useState, useEffect } from "react";
-
 import { createProfile, getCurrentProfile } from "../../actions/profile";
+
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+font-family: "Trebuchet MS", sans-serif;
+text-align: center;
+margin-top: 25px;
+`;
 
 const EditProfile = ({
   profile: { profile, loading },
@@ -39,6 +46,7 @@ const EditProfile = ({
       youtube: loading || !profile.social ? "" : profile.social.youtube,
       instagram: loading || !profile.social ? "" : profile.social.instagram
     });
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading, getCurrentProfile]);
 
@@ -63,11 +71,12 @@ const EditProfile = ({
   };
 
   return (
+    <Wrapper>
     <Fragment>
-      <h1 className="large text-primary">Create Your Profile</h1>
+      <h1 className="large text-primary">Edit Your Profile</h1>
       <p className="lead">
-        <i className="fas fa-user" /> Let's get some information to make your
-        profile stand out
+        <i className="fas fa-user" /> Let's update some information to make your
+        profile stand out.
       </p>
 
       <small>* = required field</small>
@@ -91,7 +100,7 @@ const EditProfile = ({
             onChange={e => onChange(e)}
           />
           <small className="form-text">
-            City & Country suggested (eg. Boston, MA)
+            Country & City
           </small>
         </div>
 
@@ -104,7 +113,7 @@ const EditProfile = ({
             onChange={e => onChange(e)}
           />
           <small className="form-text">
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+          For example: Home, Garden, Fashion, Gadgets...
           </small>
         </div>
 
@@ -132,7 +141,7 @@ const EditProfile = ({
         {displaySocialInputs && (
           <Fragment>
             <div className="form-group social-input">
-              <i className="fab fa-twitter fa-2x" />
+              <i className="fab fa-twitter fa-2x" /> &nbsp;&nbsp;&nbsp;
               <input
                 type="text"
                 placeholder="Twitter URL"
@@ -143,7 +152,7 @@ const EditProfile = ({
             </div>
 
             <div className="form-group social-input">
-              <i className="fab fa-facebook fa-2x" />
+              <i className="fab fa-facebook fa-2x" /> &nbsp;&nbsp;&nbsp;
               <input
                 type="text"
                 placeholder="Facebook URL"
@@ -154,7 +163,7 @@ const EditProfile = ({
             </div>
 
             <div className="form-group social-input">
-              <i className="fab fa-youtube fa-2x" />
+              <i className="fab fa-youtube fa-2x" /> &nbsp;&nbsp;&nbsp;
               <input
                 type="text"
                 placeholder="YouTube URL"
@@ -165,7 +174,7 @@ const EditProfile = ({
             </div>
 
             <div className="form-group social-input">
-              <i className="fab fa-linkedin fa-2x" />
+              <i className="fab fa-linkedin fa-2x" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <input
                 type="text"
                 placeholder="Linkedin URL"
@@ -176,7 +185,7 @@ const EditProfile = ({
             </div>
 
             <div className="form-group social-input">
-              <i className="fab fa-instagram fa-2x" />
+              <i className="fab fa-instagram fa-2x" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <input
                 type="text"
                 placeholder="Instagram URL"
@@ -188,12 +197,13 @@ const EditProfile = ({
           </Fragment>
         )}
 
-        <input type="submit" className="btn btn-primary my-1" />
+        <input type="submit" className="btn btn-primary my-1" value="Update" />
         <Link className="btn btn-light my-1" to="/dashboard">
           Go Back
         </Link>
       </form>
     </Fragment>
+  </Wrapper>
   );
 };
 

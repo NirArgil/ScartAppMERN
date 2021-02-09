@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
  height: 100%;
 
  button {
+  font-family: "Trebuchet MS", sans-serif;
   border-radius: 0 0 20px 20px;
   }
 
@@ -20,7 +21,7 @@ export const Wrapper = styled.div`
   }
 
  div {
-    font-family: Ariel, Halvetica, sans-serif;
+    font-family: "Trebuchet MS", sans-serif;
     padding: 1rem;
     height:  100%;
   }

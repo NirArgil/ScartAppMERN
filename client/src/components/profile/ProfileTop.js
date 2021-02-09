@@ -14,8 +14,8 @@ const ProfileTop = ({
       <img className="rounded" src= "" alt="" />
       <h1 className="large">{name}</h1>
       
-      <p><i className="fas fa-globe-asia fa-2x" /> {location && <span>{location}</span>}</p>
-
+      <p><i className="fas fa-globe-asia fa-2x" /> {location && <span>{location}</span>} city </p>
+      
       <div className="icons my-1">
     
         {social && social.twitter && (

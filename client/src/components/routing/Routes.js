@@ -28,16 +28,8 @@ const Routes = () => {
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/create-profile" component={CreateProfile} />
         <PrivateRoute exact path="/edit-profile" component={EditProfile} />
-        <PrivateRoute exact path="/Shop" component={Shop} />
-        {/* <PrivateRoute exact path="/" component={Logout} /> */}
-
-        
-        {/* <PrivateRoute */}
-          {/* exact */}
-          {/* path="/add-experience" */}
-          {/* component={AddExperience} */}
-        {/* /> */}
-        {/* <PrivateRoute exact path="/add-education" component={AddEducation} /> */}
+        <PrivateRoute exact path="/shop" component={Shop} />
+       
         {/* <PrivateRoute exact path="/post/:id" component={Post} /> */}
         {/* <PrivateRoute exact path="/posts" component={Posts} /> */}
         <Route component={NotFound} />

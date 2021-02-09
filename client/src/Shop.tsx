@@ -24,7 +24,7 @@ import { register } from "./actions/auth";
 import setAuthToken from "./utilities/setAuthToken";
 
 //Styles
-import { Wrapper, StyledButton } from './App.styles';
+import { Wrapper, StyledButton } from './Shop.styles';
 
 //Type
 export type CartItemType = {
@@ -38,7 +38,7 @@ export type CartItemType = {
   }
 
 
-const getProducts = async (): Promise<CartItemType[]> =>
+export const getProducts = async (): Promise<CartItemType[]> =>
   await (await fetch('https://fakestoreapi.com/products')).json();
 
 
@@ -94,6 +94,10 @@ if (error) return <div>Somethine went wrong ...</div>;
 
 return (    
   <Wrapper>
+
+    <p className="intro"><b> Welcome </b> to scart shopping area, <br/> </p>
+    <p className="intro2"> Here you can select items you like and add it to your shopping cart.</p>
+
     < Drawer anchor='right' open={cartOpen} onClose={() => setCartOpen(false)}>
         <Cart 
         cartItems={cartItems} 

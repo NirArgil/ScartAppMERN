@@ -63,12 +63,9 @@ const Dashboard = ({
         <Fragment>
         <Wrapper>
           <DashboardActions />
-          {/* <Experience experience={profile.experience} /> */}
-            {/* <Education education={profile.education} /> */}
-
-           
+              
             <div className="GoShop"> 
-              <Link to="Shop" className="btn btn-light">
+              <Link to="/shop" className="btn btn-light">
               <i className="far fa-handshake fa-2x" /> Go Shopping
               </Link>
             </div>
@@ -86,7 +83,8 @@ const Dashboard = ({
       ) : (
        <Fragment>
         <Wrapper>
-          <p>You have not created a profile, please add some info</p>
+          <p>You're profile is empty right now,<br />
+           please create your profile and add some info</p>
           <Link to="/create-profile" className="btn btn-primary my-1">
             Create Profile
           </Link>

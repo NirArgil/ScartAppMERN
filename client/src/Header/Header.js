@@ -1,16 +1,8 @@
 import { Wrapper } from "./Header.styles";
-import { connect, Provider } from "react-redux";
+import { Provider } from "react-redux";
 import { Logout }  from "../components/auth/Logout";
-import auth from "../../src/components/profile/Profile"
-import {logout} from "../actions/auth"
 import store from "../store";
-import * as getCurrentProfile from "../../src/actions/profile";
-import React, { useEffect, Fragment } from "react";
-import { loadUser } from "../actions/auth";
-import userEvent from "@testing-library/user-event";
-import { Link, Router } from "react-router-dom";
-
-
+import React from "react";
 
 const Header =  () => {
   

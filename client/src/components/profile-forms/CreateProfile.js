@@ -2,8 +2,14 @@ import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import React, { Fragment, useState } from "react";
-
 import { createProfile } from "../../actions/profile";
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+font-family: "Trebuchet MS", sans-serif;
+text-align: center;
+margin-top: 25px;
+`;
 
 const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
@@ -41,6 +47,7 @@ const CreateProfile = ({ createProfile, history }) => {
   };
 
   return (
+  <Wrapper>
     <Fragment>
       <h1 className="large text-primary">Create Your Scart Profile</h1>
       <p className="lead">
@@ -54,7 +61,6 @@ const CreateProfile = ({ createProfile, history }) => {
             <option value="0">* Select Your Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
-            <option value="Other">Other</option>
           </select>
         </div>
 
@@ -67,7 +73,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={e => onChange(e)}
           />
           <small className="form-text">
-           Country and City (eg. Boston, MA)
+          Country & City
           </small>
         </div>
 
@@ -80,7 +86,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={e => onChange(e)}
           />
           <small className="form-text">
-            for example: Home, Garden, Fashion, Gadgets...
+          Please use comma separated values (Home, Garden, Fashion, Gadgets and more.)
           </small>
         </div>
         
@@ -162,12 +168,13 @@ const CreateProfile = ({ createProfile, history }) => {
           </Fragment>
         )}
 
-        <input type="submit" className="btn btn-primary my-1" />
+        <input type="submit" className="btn btn-primary my-1" value="Create" />
         <Link className="btn btn-light my-1" to="/dashboard">
           Go Back
         </Link>
       </form>
     </Fragment>
+  </Wrapper> 
   );
 };
 
