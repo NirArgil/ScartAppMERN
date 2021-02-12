@@ -13,13 +13,14 @@ export const Wrapper = styled.div`
 }
 
 .DashBtn { 
-  display: inline-block
+  display: inline-block;
   margin-right: 3px;
 }
 
 .LogoutBtn {
- display: inline-block
-}`;
+ display: inline-block;
+}
+`;
 
 export const Logout = ( ) => {  
 

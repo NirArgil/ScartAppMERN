@@ -9,9 +9,10 @@ import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 
 export const Wrapper = styled.div`
-font-family: "Trebuchet MS", sans-serif;
-text-align: center;
-margin-top: 25px;
+  font-family: "Trebuchet MS", sans-serif;
+  text-align: center;
+  margin-top: 25px;
+  height: 590px;
 
 .profiles {
   display: flex;

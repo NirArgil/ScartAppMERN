@@ -34,6 +34,9 @@ p {
  font-weight: 100;
  font-size: 25px;
 }
+
+.Dbox {
+  height: 230px;
 }
 `;
 
@@ -63,7 +66,9 @@ const Dashboard = ({
         <Fragment>
         <Wrapper>
           <DashboardActions />
-              
+
+          <div className="Dbox">
+
             <div className="GoShop"> 
               <Link to="/shop" className="btn btn-light">
               <i className="far fa-handshake fa-2x" /> Go Shopping
@@ -77,7 +82,7 @@ const Dashboard = ({
                 </button>
               </div>
             </div>
-
+        </div>
             </Wrapper>
         </Fragment>
       ) : (

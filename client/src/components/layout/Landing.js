@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 .landing {
   text-align: center;
-  height: 680px;
+  height: 720px;
 }
 
 h1 {
