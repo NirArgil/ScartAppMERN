@@ -1,0 +1,7 @@
+.landing {
+    background-image:url(./img/C.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat:no-repeat;
+}

@@ -12,9 +12,9 @@ export const Wrapper = styled.div`
   margin-right: 16px;
 }
 
-.DashBtn {
-  margin-right: 3px;
+.DashBtn { 
   display: inline-block
+  margin-right: 3px;
 }
 
 .LogoutBtn {
