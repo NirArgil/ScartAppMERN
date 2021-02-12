@@ -9,6 +9,7 @@ const Wrapper = styled.div`
 font-family: "Trebuchet MS", sans-serif;
 text-align: center;
 margin-top: 25px;
+height: 540px;
 `;
 
 const CreateProfile = ({ createProfile, history }) => {

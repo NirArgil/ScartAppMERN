@@ -11,7 +11,7 @@ const Header =  () => {
      <Wrapper>
      
       <nav class="navbar sticky-top">
-        <a class="navbar-brand" href="">Scart</a>
+        <a class="navbar-brand" href="/">Scart</a>
        
          <Logout />
            

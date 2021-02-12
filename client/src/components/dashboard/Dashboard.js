@@ -10,9 +10,14 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+
 font-family: "Trebuchet MS", sans-serif;
 text-align: center;
 margin-top: 25px;
+
+.mptprofile {
+  height: 320px;
+}
 
 h1 {
  letter-spacing: 7px;
@@ -88,11 +93,13 @@ const Dashboard = ({
       ) : (
        <Fragment>
         <Wrapper>
-          <p>You're profile is empty right now,<br />
-           please create your profile and add some info</p>
-          <Link to="/create-profile" className="btn btn-primary my-1">
-            Create Profile
-          </Link>
+          <div className="mptprofile">
+            <p>You're profile is empty right now,<br />
+            please create your profile and add some info</p>
+            <Link to="/create-profile" className="btn btn-primary my-1">
+              Create Profile
+            </Link>
+          </div>
           </Wrapper>
         </Fragment>
       )}
