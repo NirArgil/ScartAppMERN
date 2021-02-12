@@ -8,10 +8,13 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
 
 .landing {
- margin-top: 77px;
- text-align: center;
+  background-attachment: fixed;
+  background-position: top;
+  background-image:url(./img/C.jpg);
+  background-size: contain;
+  margin-top: 77px;
+  text-align: center;
 }
-
 
 h1 {
  font-family: "Trebuchet MS", sans-serif;
@@ -40,7 +43,6 @@ const Landing = ({ isAuthenticated }) => {
   return (
     <Wrapper>
     <section className="landing">
-      <div className="dark-overlay">
         <div className="landing-inner">
           <h1 className="x-large">This is Scart</h1>
           <p className="lead">
@@ -54,9 +56,8 @@ const Landing = ({ isAuthenticated }) => {
               Login
             </Link>
           </div>
-        </div>
-      </div>
-    </section>
+        </div> 
+      </section>
     </Wrapper>
   );
 };
