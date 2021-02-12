@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
 
-footer{
 	position: relative;
 	bottom: 0;
-}
+
 .footer-distributed{
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -14,6 +13,7 @@ footer{
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 15px 50px;
+	
 }
  
 .footer-distributed .footer-left,

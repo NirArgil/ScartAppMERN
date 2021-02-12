@@ -1,5 +1,6 @@
 .landing {
     background-image:url(./img/C.jpg);
+    width: 100%;
     background-attachment: fixed;
     background-size: cover;
     background-position: bottom;

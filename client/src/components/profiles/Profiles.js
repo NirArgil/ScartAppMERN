@@ -12,11 +12,20 @@ export const Wrapper = styled.div`
   font-family: "Trebuchet MS", sans-serif;
   text-align: center;
   margin-top: 25px;
-  height: 590px;
+  width: 100%;
+  margin-bottom: 30px;
 
 .profiles {
-  display: flex;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
   justify-content:  space-around;
+  
+ 
+@media (max-width: 800px) {
+  .profiles {
+    display: grid;
+    grid-template-columns:300px;
+  }
 }
 
 `;

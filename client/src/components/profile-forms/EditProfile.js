@@ -10,7 +10,8 @@ const Wrapper = styled.div`
 font-family: "Trebuchet MS", sans-serif;
 text-align: center;
 margin-top: 25px;
-height: 590px;  
+width: 100%;  
+margin-bottom: 50px;
 `;
 
 const EditProfile = ({
