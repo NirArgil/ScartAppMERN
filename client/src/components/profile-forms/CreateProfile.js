@@ -6,11 +6,11 @@ import { createProfile } from "../../actions/profile";
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-font-family: "Trebuchet MS", sans-serif;
-text-align: center;
-margin-top: 25px;
-height: 540px;
-width: 100%;
+  font-family: "Trebuchet MS", sans-serif;
+  text-align: center;
+  margin-top: 25px;
+  width: 100%;
+  margin-bottom: 50px;
 
 textarea {
   width: 230px;
