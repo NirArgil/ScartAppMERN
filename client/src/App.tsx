@@ -4,13 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Fragment, useEffect } from "react";
 
 //Components
-import Item from './Item/Item';
-import Cart from './Cart/Cart';
-import Drawer from '@material-ui/core/Drawer';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import Grid from '@material-ui/core/Grid';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import Badge from '@material-ui/core/Badge';
 import Header from './Header/Header';
 import type { CartItemType } from "./Shop";
 import { getProducts } from "./Shop";
@@ -23,7 +17,6 @@ import Routes from "./components/routing/Routes";
 import { Provider } from 'react-redux';
 import store from "./store";
 import { loadUser } from "./actions/auth";
-import { register } from "./actions/auth";
 import setAuthToken from "./utilities/setAuthToken";
 
   if (localStorage.token) {

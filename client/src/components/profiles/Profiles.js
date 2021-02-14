@@ -14,12 +14,16 @@ export const Wrapper = styled.div`
   margin-top: 25px;
   width: 100%;
   margin-bottom: 30px;
+  justify-content: center; 
+  width: 100%;
 
 .profiles {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   justify-content:  space-around;
-  
+  margin-left: 100px;
+
+}
  
 @media (max-width: 800px) {
   .profiles {

@@ -12,15 +12,6 @@ import Grid from '@material-ui/core/Grid';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Badge from '@material-ui/core/Badge';
 
-//Login
-import Landing from "./components/layout/Landing";
-import Routes from "./components/routing/Routes";
-
-// REDUX
-import { Provider } from 'react-redux';
-import store from "./store";
-import { loadUser } from "./actions/auth";
-import { register } from "./actions/auth";
 import setAuthToken from "./utilities/setAuthToken";
 
 //Styles

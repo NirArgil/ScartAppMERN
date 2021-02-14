@@ -12,7 +12,12 @@ export const Wrapper = styled.div`
  font-family: "Trebuchet MS", sans-serif;
  text-align: center;
  margin-top: 25px;
- height: 540px;
+ height: 500px;
+
+ .if {
+  position: relative;
+  top: 30px;
+ }
 `;
 
 export const Register = ({ setAlert, register, isAuthenticated }) => {
@@ -54,7 +59,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="Name"
+            placeholder="Enter Full Name"
             name="name"
             value={name}
             onChange={e => onChange(e)}
@@ -64,7 +69,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className="form-group">
           <input
             type="email"
-            placeholder="Email Address"
+            placeholder="Enter Email Address"
             name="email"
             value={email}
             onChange={e => onChange(e)}
@@ -74,7 +79,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className="form-group">
           <input
             type="password"
-            placeholder="Password"
+            placeholder="New Password"
             name="password"
             value={password}
             onChange={e => onChange(e)}
@@ -84,7 +89,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className="form-group">
           <input
             type="password"
-            placeholder="Confirm Password"
+            placeholder="Confirm New Password"
             name="password2"
             value={password2}
             onChange={e => onChange(e)}
@@ -93,8 +98,8 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
         </div>
         <input type="submit" className="btn btn-primary" value="Register" />
       </form>
-        <p className="my-1">
-            Already have an account? <Link to="login.html">Sign In</Link>
+        <p className="if">
+            Already have an account? <Link to="/login">Sign In</Link>
         </p>
       </Wrapper>
     </Fragment>

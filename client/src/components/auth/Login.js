@@ -12,6 +12,11 @@ export const Wrapper = styled.div`
   text-align: center;
   margin-top: 25px;
   height: 480px;
+
+  .if {
+    position: relative;
+    top: 30px;
+  }
 `;
 
 
@@ -67,8 +72,8 @@ const Login = ({ login, isAuthenticated }) => {
         </div>
         <input type="submit" className="btn btn-primary" value="Login" />
       </form>
-      <br/>
-      <p className="my-1">
+      
+      <p className="if">
         Don't have any account? <Link to="/register">Sign Up</Link>
       </p>
       </Wrapper>
