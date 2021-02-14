@@ -12,6 +12,12 @@ text-align: center;
 margin-top: 25px;
 width: 100%;  
 margin-bottom: 50px;
+
+textarea {
+  width: 230px;
+  height: 70px;
+}
+
 `;
 
 const EditProfile = ({
@@ -121,7 +127,7 @@ const EditProfile = ({
 
         <div className="form-group">
           <textarea
-            placeholder="A short bio of yourself"
+            placeholder ="A short bio of yourself"
             name="bio"
             value={bio}
             onChange={e => onChange(e)}

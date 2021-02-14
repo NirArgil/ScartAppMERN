@@ -10,6 +10,13 @@ font-family: "Trebuchet MS", sans-serif;
 text-align: center;
 margin-top: 25px;
 height: 540px;
+width: 100%
+
+textarea {
+  width: 230px;
+  height: 70px;
+}
+
 `;
 
 const CreateProfile = ({ createProfile, history }) => {
