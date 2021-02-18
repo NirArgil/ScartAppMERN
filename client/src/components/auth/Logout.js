@@ -42,6 +42,12 @@ const onlogoutClick = async e => {
           </Link> ) : ( null ) }
     </div>  
 
+    <div className="CustomersBtn">
+      { Loggedin ? ( <Link to="/profiles" className="btn btn-light">
+           Scart Customers 
+          </Link> ) : ( null ) }
+    </div>
+
     <div className="DashBtn">
       { Loggedin ? ( <Link to="/dashboard" className="btn btn-light">
            Dashboard 
