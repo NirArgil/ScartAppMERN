@@ -30,8 +30,6 @@ const Routes = () => {
         <PrivateRoute exact path="/edit-profile" component={EditProfile} />
         <PrivateRoute exact path="/shop" component={Shop} />
        
-        {/* <PrivateRoute exact path="/post/:id" component={Post} /> */}
-        {/* <PrivateRoute exact path="/posts" component={Posts} /> */}
         <Route component={NotFound} />
       </Switch>
     </section>

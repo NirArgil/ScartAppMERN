@@ -14,12 +14,6 @@ import {
   CLEAR_PROFILE
 } from "./types";
 
-let API_URL="http://localhost:3000/users";
-
-// if(process.env.NODE_ENV === 'development'){
-//   API_URL = 'http://localhost:3000/users';
-// }
-
 // Load User Action Function
 export const loadUser = () => async dispatch => {
   // check if token exists from localStorage;

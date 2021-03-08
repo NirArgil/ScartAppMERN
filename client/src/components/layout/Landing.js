@@ -65,6 +65,7 @@ const Landing = ({ isAuthenticated }) => {
             <Link to="/login" id="login" className="btn btn-light">
               Login
             </Link>
+
           </div>
         
       </section>
