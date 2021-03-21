@@ -39,7 +39,7 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart}) => (
             </Button>
         </div>
     </div>
-    <img src={item.image} alt={item.title} />
+    <img src={item.thumbnailUrl} alt={item.title} />
 </Wrapper>
 );
 export default CartItem;

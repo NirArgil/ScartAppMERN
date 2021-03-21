@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const ProfileSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    // we make reference to the user model since each profile is related to a user
+    //reference to the user model since each profile is related to a user
     ref: "user"
   },
   location: {

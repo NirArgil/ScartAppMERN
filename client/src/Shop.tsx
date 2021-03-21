@@ -22,7 +22,7 @@ export type CartItemType = {
     id: number;
     category: string;
     description: string;
-    image: string;
+    thumbnailUrl: string;
     price: number;
     title: string;
     amount: number;
@@ -30,8 +30,7 @@ export type CartItemType = {
 
 
 export const getProducts = async (): Promise<CartItemType[]> =>
-  await (await fetch('https://fakestoreapi.com/products')).json();
-
+  await (await fetch('https://jsonplaceholder.typicode.com/photos/?_limit=10')).json();
 
   if (localStorage.token) {
     setAuthToken(localStorage.token);
